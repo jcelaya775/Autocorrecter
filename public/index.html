@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoCorrecter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="content">
+      <h2 class="output">Autocorrect your text:</h2>
+      <input type="input" class="input" />
+      <button type="submit" class="button">Submit</button>
+    </div>
+
+    <script>
+      const btn = document.querySelector('.button');
+      const input = document.querySelector('.input');
+      const output = document.querySelector('.output');
+
+      btn.addEventListener('click', correctText);
+
+      function correctText() {
+        const xhr = new XMLHttpRequest();
+
+        xhr.open('POST', '/server');
+        xhr.setRequestHeader(
+          'Content-type',
+          'application/x-www-form-urlencoded'
+        );
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            let data = JSON.parse(xhr.responseText);
+            output.textContent = data.correctedText;
+            console.log(data);
+          }
+        };
+
+        xhr.send('text=' + input.value);
+      }
+    </script>
+  </body>
+</html>

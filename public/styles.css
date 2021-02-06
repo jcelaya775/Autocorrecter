@@ -1,0 +1,84 @@
+body {
+    background: -webkit-linear-gradient(right, #178bd3 10%, #3232a1 100%);
+}
+
+button[type=submit] {
+    outline: none;
+    border-radius: 5px;
+    border: 0;
+    width: 85px;
+    height: 35px;
+    font-family: Tahoma;
+    color: white;
+    background: #f4f4f4;
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #3a9beb 1%, #0059ff 100%);
+}
+
+@keyframes shift {
+    0% {
+        background: -webkit-linear-gradient(left, #0059ff 1%, #008cff 100%);
+    }
+
+    50% {
+        background: -webkit-linear-gradient(left, #0059ff 1%, #008cff 100%);
+    }
+
+    100% {
+        background: -webkit-linear-gradient(left, #0059ff 1%, #008cff 100%);
+    }
+}
+
+@keyframes clicked {
+    0% {
+        background: white;
+        opacity: 65%;
+    }
+
+    10% {
+        background: -webkit-linear-gradient(left, #008cff 1%, #0059ff 100%);
+    }
+
+    100% {
+        background: -webkit-linear-gradient(left, #0059ff 1%, #008cff 100%);
+    }
+}
+
+button[type=submit]:hover {
+    transition-timing-function: ease-in-out;
+    transition-duration: 3;
+    animation-name: shift;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    background: -webkit-linear-gradient(left, #0059ff 1%, #008cff 100%);
+}
+
+button[type=submit]:active {
+    animation-name: clicked;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+input[type=input] {
+    opacity: 90%;
+    border-radius: 5px;
+    border: 0;
+    width: 350px;
+    height: 35px;
+    font-family: monospace;
+    background: #f4f4f4;
+    font-size: 15px;
+    outline: none;
+}
+
+.content {
+    text-align: center;
+    margin-top: 250px;
+}
+
+.output {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    margin: 100px;
+}
