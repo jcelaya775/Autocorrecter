@@ -1,5 +1,5 @@
 body {
-    background: -webkit-linear-gradient(right, #178bd3 10%, #3232a1 100%);
+    background: -webkit-linear-gradient(right, #178bd3 10%, #222279 100%);
 }
 
 button[type=submit] {
@@ -12,7 +12,7 @@ button[type=submit] {
     color: white;
     background: #f4f4f4;
     /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, #3a9beb 1%, #0059ff 100%);
+    background: -webkit-linear-gradient(left, #d36424 1%, #cc9e07 100%);
 }
 
 @keyframes shift {
