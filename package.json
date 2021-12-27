@@ -1,10 +1,10 @@
 {
   "name": "autocorrecter",
   "version": "1.0.0",
-  "description": "",
   "main": "script.js",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "express": "^4.17.2",
     "https": "^1.0.0",
     "prompt-sync": "^4.2.0"
   },
@@ -14,5 +14,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcelaya775/Autocorrecter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jcelaya775/Autocorrecter/issues"
+  },
+  "homepage": "https://github.com/jcelaya775/Autocorrecter#readme",
+  "description": ""
 }
