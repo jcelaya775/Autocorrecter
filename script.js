@@ -11,10 +11,10 @@ let key = '29a1a0c9c18c4522bc0a0fa2158cccfa';
 
 let mkt = 'en-US';
 let mode = 'proof';
-let output = '';
-let text = '';
 let query_string = '?mkt=' + mkt + '&mode=' + mode;
 
+let output = '';
+let text = '';
 let tokens;
 
 let makeRequest = () => {
@@ -74,7 +74,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 /* Add real-time autocorrect funtionality */
 /****/
 
-app.post('/server', (req, res) => {
+app.get('/server', (req, res) => {
   output = ''; // reset output
   text = req.body.text;
 
